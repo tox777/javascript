@@ -1,0 +1,74 @@
+<html>
+    <head>
+        <title>Variables</title>
+
+        <script>
+
+         
+         
+         
+         
+         
+
+         
+         
+         
+
+           //arreglo
+           var variableArreglo = ['Viernes', 'Sabado' , 'Lunes'];
+
+            console.log(variableArreglo);
+            //push
+            variableArreglo.push("Sabado" , "Domingo");
+
+
+            console.log(variableArreglo);
+
+            //pop  eliminar el ultimo
+            variableArreglo.pop();
+
+            console.log(variableArreglo);
+
+
+            variableArreglo[2] = "Miercoles";
+
+
+            console.log(variableArreglo);
+
+
+            function enviarInfo(){
+                alert();
+                var elementoInput = document.getElementById("txtNombre");
+
+                variableArreglo.push(elementoInput.value);
+                //para ordenar
+
+                variableArreglo.sort();
+
+                console.log(variableArreglo);
+
+                variableArreglo.reverse();
+
+                console.log(variableArreglo);
+
+            }
+
+   </script>
+    </head>
+    <body>
+        <h1 id="tituloUno">Titulo de ejemplo</h1>
+        <h1 id="tituloDos">Titulo de ejemplo</h1>
+
+        <div id="divTestObjetos">
+            <input type="text" id="txtNombre" name="txtNombre" >
+            <a onclick="enviarInfo()">Enviar</a>
+        </div>
+
+        <script>
+var elemento = document.getElementById("tituloUno");
+elemento.innerHTML = variableArreglo;
+
+
+        </script>
+    </body>
+</html>

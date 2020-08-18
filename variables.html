@@ -1,0 +1,48 @@
+<html>
+    <head>
+        <title>Variables</title>
+
+        <script>
+            var testVariableLetra = "Lunes";
+            var testVariableNumero = 999;
+
+            var variableTres = 22, variableCuatro = "Martes";
+
+            console.log(testVariableNumero);
+            testVariableNumero++;
+
+            console.log(testVariableNumero);
+
+            testVariableNumero = testVariableNumero + 1; 
+
+            var testVariableRara = "3";
+
+            //concatenar
+            console.log(testVariableNumero + testVariableRara);
+
+
+            console.log(testVariableNumero);
+
+
+            console.log(variableTres);
+
+
+            //esto no correo xq no se ha cargado el elemento en el DOM
+            //var elemento = document.getElementById("tituloUno");
+
+           // elemento.innerHTML = "Nuevo titulo";
+
+            
+        </script>
+    </head>
+    <body>
+        <h1 id="tituloUno">Titulo de ejemplo</h1>
+
+
+        <script>
+var elemento = document.getElementById("tituloUno");
+elemento.innerHTML = testVariableLetra;
+
+        </script>
+    </body>
+</html>

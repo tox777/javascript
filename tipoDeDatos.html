@@ -1,0 +1,77 @@
+<html>
+    <head>
+        <title>Variables</title>
+
+        <script>
+
+            //tipos de variables
+           var variable1 = 10;
+           var variableFlotante = 10.5;
+           var variableBooleanas = true; //false
+           var variableLetra = "Este es un string";
+
+           var resultado =  variable1 * variableFlotante;
+           //var resultado =  variable1 + variableFlotante;
+           //var resultado =  variable1 / variableFlotante;
+
+           //arreglo
+           var variableArreglo = ['Jorge', 'Lunes' , 'Viernes'];
+           
+            alert(variableArreglo[0]);
+
+
+            alert(variableArreglo);
+
+            console.log(variableArreglo);
+
+            //objetos
+            var personas = {
+               0: {
+                    "NombrePersona": "Jorge",
+                    "frutas": {0 : {"nombreDeFruta" : "manzana", 
+                                    "sabor": "dulce"},
+                               1 : {"nombreDeFruta": "Pera", 
+                                    "sabor": "amargo"}},
+                    "sabor" : 'dulce',
+                    "esCostarricense" : true,
+                    "cantidadDeVisitas": 100
+                    },
+               1: {
+                   "NombrePersona" : 'Maria',
+                   "fruta": "Limon",
+                   "Sabor": "acido",
+                   "esCostarricense" : false,
+                    "cantidadDeVisitas": 44
+               }
+            }
+
+            console.log(personas);
+                    
+            document.write
+
+   </script>
+    </head>
+    <body>
+        <h1 id="tituloUno">Titulo de ejemplo</h1>
+        <h1 id="tituloDos">Titulo de ejemplo</h1>
+
+        <div id="divTestObjetos">
+            <p id="objeto1"></p>
+            <p id="objeto2"></p>
+        </div>
+
+        <script>
+var elemento = document.getElementById("tituloUno");
+elemento.innerHTML = variableArreglo;
+
+
+var testObjeto1 = document.getElementById("objeto1");
+var testObjeto2 = document.getElementById("objeto2");
+
+    testObjeto1.innerHTML = "Nombre: " + personas[0]["NombrePersona"] + " <br/> Segunda Fruta: "+ personas[0]["frutas"][1]["nombreDeFruta"];
+//objetos
+
+
+        </script>
+    </body>
+</html>
