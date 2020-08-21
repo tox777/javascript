@@ -1,0 +1,51 @@
+<html>
+    <head>
+        <title>Variables</title>
+
+
+
+       
+
+    </head>
+    <body>
+     
+        <hr>
+        <a href="#" onclick="agregarElementoAlDom()">Agregar elemento</a>
+
+        <br>
+        <a href="#" onclick="eliminarElmentoDelDom()">Eliminar elemento</a>
+        <div id="testElemento">
+
+        </div>
+
+
+        <ul id="lista">
+            <li>test 1</li>
+            <li>Test 2</li>
+        </ul>
+        
+        <script>
+
+            function agregarElementoAlDom(){
+                var elemento = document.createElement("h1");
+                var contenido = document.createTextNode("Titulo creado desde script");
+                elemento.appendChild(contenido);
+
+
+
+                document.getElementById("testElemento").appendChild(elemento);
+                //var testElemento  = document.getElementById("testElemento");
+                //testElemento.appendChild(elemento);
+
+            }
+
+            function eliminarElmentoDelDom(){
+                var testLista =  document.getElementById("lista");
+
+                testLista.remove();
+
+            }
+
+        </script>
+    </body>
+</html>

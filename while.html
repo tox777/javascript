@@ -1,0 +1,56 @@
+<html>
+    <head>
+        <title>Variables</title>
+
+
+
+       
+
+    </head>
+    <body>
+        
+        
+
+        <a onclick="enviar();" href="#">Enviar texto</a>
+        
+        <div id="testElemento">
+
+        </div>
+        
+
+        <script>
+            
+            var testArray = ["Jorge", "Maria", "Pablo"];
+
+            function enviarFormulario(){
+
+                var elemento = document.getElementById("testElemento");
+
+                var i = 0;
+                while(i<testArray.length){
+                    alert(i);
+                    elemento.innerHTML = elemento.innerHTML + "<div style='background-color:#CCC'><h1> "+testArray[i]+"</h1></div>";
+                    i++;
+                }
+
+
+                //CICLO FOR
+               // for(var i = 0; i<testArray.length; i++){
+                    //elemento.innerHTML = elemento.innerHTML + "<div style='background-color:#CCC'><h1> TITULO "+i+"</h1></div>";
+               //     elemento.innerHTML = elemento.innerHTML + "<div style='background-color:#CCC'><h1> "+testArray[i]+"</h1></div>";
+               // }     
+
+            }
+
+
+            function suma(valor1, valor2){
+                ///
+                var total = valor1 + valor2;
+                alert(total);
+
+            }
+
+
+        </script>
+    </body>
+</html>

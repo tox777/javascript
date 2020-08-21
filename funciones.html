@@ -1,0 +1,88 @@
+<html>
+    <head>
+        <title>Variables</title>
+
+
+
+       
+
+    </head>
+    <body>
+        
+        
+        <input type="text" id="txtSuma1" name="txtSuma1">
+        <input type="text" id="txtSuma2" name="txtSuma2">
+        <a onclick="enviarFormulario();" href="#">Enviar texto</a>
+        <hr>
+        <div>
+            <input type="text" name="txtFruta" id="txtFruta">
+            <a onclick="addFruta();" href="#">Agregar Fruta</a>
+        
+        </div>
+
+        <div id="testElemento">
+
+        </div>
+        
+
+        <script>
+            
+            var testArray = ["Jorge", "Maria", "Pablo"];
+
+            var arrElemento = ["Manzanas", "Naranjas" , "Uvas"]; 
+
+            
+            function enviarFormulario(){
+
+                 //var totalSuma = suma(10, 50); //primer ejemplo
+
+                 var totalSuma = suma2();        
+                 alert(totalSuma);          
+            }
+
+
+            function suma(valor1, valor2){
+                ///
+                var total = valor1 + valor2;
+
+                return total;
+            }
+
+            function suma2(){
+                ///
+                var valor1 = document.getElementById("txtSuma1").value;
+                var valor2 = document.getElementById("txtSuma2").value;
+                console.log(valor1);
+                console.log(parseInt(valor1));
+                var total = parseInt(valor1) + parseInt(valor2);
+
+                return total;
+            }
+
+            function agregaElementoArray(fruta){
+
+                if(fruta!=''){
+                   // var arrElemento = ["Manzanas", "Naranjas" , "Uvas"];
+                    arrElemento.push(fruta);
+                    return arrElemento;
+                    //codigo de aca en adelante en la funcion no corre
+                }
+            }
+
+            function addFruta(){
+                var elementoFruta = document.getElementById("txtFruta").value;
+                var frutas = agregaElementoArray(elementoFruta);
+                
+                var elemento = document.getElementById("testElemento");
+                elemento.innerHTML = "";
+                for(var i=0; i<frutas.length; i++){
+                    elemento.innerHTML = elemento.innerHTML + "<div style='background-color:#CCC'><h1> "+frutas[i]+"</h1></div>";
+                }
+
+            }
+
+
+
+        </script>
+    </body>
+</html>

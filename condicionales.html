@@ -1,0 +1,40 @@
+<html>
+    <head>
+        <title>Variables</title>
+
+
+
+       
+
+    </head>
+    <body>
+        <input type="text" id="test1">
+        
+
+        <a onclick="enviar();" href="#">Enviar texto</a>
+        
+        
+        
+
+        <script>
+            //< > = && | !
+            function enviar(){
+                var valor  = document.getElementById("test1").value;
+                //CONTAR LAS PALABRAS 
+                alert(valor.length);
+
+                //
+                if(valor.trim()==''){
+                    alert("Debe indicar un nombre");
+                }else{
+                    if(valor=='Jorge' || valor == "Torres"){
+                        alert("Correcto");
+                    }else{
+                        alert("Incorrecto ");
+                    }
+                }
+
+            }
+        </script>
+    </body>
+</html>
