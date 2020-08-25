@@ -1,0 +1,57 @@
+<html>
+    <head>
+        <title>Promesas</title>
+
+    </head>
+    <body>
+
+
+    <script>
+        var ejemploFuncionPromesa = new Promise(function(resolve, reject){
+            var miVariable = 6;
+            if(miVariable<=6){
+               
+                resolve('Esta es la variable '+miVariable);
+            }else{
+                reject(Error("Esto no funciono"));
+            }
+        });
+
+
+
+        //para llamar la funcion y esperar la respuesta
+        /**
+        ejemploFuncionPromesa.then(function(datos){
+            alert(datos);
+        }, function(){
+            alert();
+        });
+
+        **/
+
+        function ejecutarDespuesDeDosSegundos(x){
+            return new Promise(resolve => {
+                setTimeout(() => {
+                    resolve(x);
+                }, 2000);  
+    
+            } );
+        }
+
+        async function miFuncion(){
+            var variableEspera = await ejecutarDespuesDeDosSegundos(75);
+            alert(variableEspera);
+        }
+
+        miFuncion();
+
+
+
+        
+
+
+     </script>
+     
+
+     </body>
+</html>
